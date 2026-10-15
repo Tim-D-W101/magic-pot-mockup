@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en-ZA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Magic Pot – Curries, bunny chow and platters in Richards Bay</title>
+<meta name="description" content="Concept mock-up. The Magic Pot: best curries and platters in Richards Bay. Mutton curry, bunny chow, breyani, seafood boil and catering. Order on WhatsApp.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,700;9..144,900,100&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FBF4E6;
+    --cream-2:#F3E6CC;
+    --turmeric:#E9A825;
+    --turmeric-deep:#B57A00;
+    --chilli:#B3261E;
+    --aubergine:#2B1A2E;
+    --aubergine-2:#3E2A42;
+    --ink:#2B1A2E;
+    --muted:#5E4F61;
+    --whatsapp:#1F7A4D;
+    --white:#FFFFFF;
+    --radius:14px;
+    --shadow:0 6px 24px rgba(43,26,46,.10);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;overflow-x:clip}
+  body{
+    margin:0;background:var(--cream);color:var(--ink);
+    font-family:"Nunito Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    font-size:17px;line-height:1.55;overflow-x:clip;
+    padding-bottom:84px; /* room for sticky bar on phones */
+  }
+  h1,h2,h3{font-family:"Fraunces",Georgia,serif;font-variation-settings:"SOFT" 100;line-height:1.1;margin:0 0 .4em}
+  h1{font-size:clamp(2.2rem,8vw,4rem);font-weight:900}
+  h2{font-size:clamp(1.7rem,5.5vw,2.5rem);font-weight:900}
+  h3{font-size:1.2rem;font-weight:700}
+  p{margin:0 0 1em}
+  a{color:var(--chilli)}
+  img{display:block;max-width:100%;height:auto}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 16px}
+  section{padding:56px 0}
+  .eyebrow{display:inline-block;font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:.78rem;color:var(--turmeric-deep);margin-bottom:.6em}
+  .lead{font-size:1.1rem;color:var(--muted);max-width:60ch}
+
+  /* Concept banner */
+  .concept{background:var(--aubergine);color:var(--cream);font-size:.9rem;text-align:center;padding:10px 16px;line-height:1.4}
+  .concept strong{color:var(--turmeric)}
+
+  /* Nav */
+  .nav{position:sticky;top:0;z-index:20;background:rgba(251,244,230,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--cream-2)}
+  .nav .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:4px 12px;padding-top:8px;padding-bottom:8px}
+  .brand{display:flex;align-items:center;gap:10px;font-family:"Fraunces",Georgia,serif;font-weight:900;font-size:1.25rem;color:var(--ink);text-decoration:none;white-space:nowrap;min-height:44px}
+  .brand svg{width:30px;height:30px;flex:none}
+  .nav ul{list-style:none;margin:0 -6px;padding:0;display:flex;flex-wrap:wrap;gap:2px}
+  .nav li a{display:block;padding:8px 9px;border-radius:999px;color:var(--ink);text-decoration:none;font-weight:600;font-size:.9rem;white-space:nowrap}
+  .nav li a:hover{background:var(--cream-2)}
+  @media (min-width:640px){.nav .wrap{flex-wrap:nowrap;min-height:60px;padding-top:0;padding-bottom:0}.nav ul{margin:0;gap:4px}.nav li a{font-size:.95rem;padding:8px 10px}}
+
+  /* Buttons */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 20px;border-radius:999px;font-weight:700;text-decoration:none;border:0;cursor:pointer;font-size:1rem;font-family:inherit;line-height:1.2;min-height:48px}
+  .btn svg{width:20px;height:20px;flex:none}
+  .btn-wa{background:var(--whatsapp);color:var(--white)}
+  .btn-wa:hover{background:#19633e}
+  .btn-turmeric{background:var(--turmeric);color:var(--ink)}
+  .btn-turmeric:hover{background:#d99a1a}
+  .btn-outline{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+  .btn-outline:hover{background:var(--cream-2)}
+  .btn-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+  @media (max-width:480px){.btn-row .btn{width:100%}}
+
+  /* Hero */
+  .hero{padding:40px 0 56px;position:relative}
+  .hero .wrap{display:grid;gap:28px;align-items:center}
+  .status{display:inline-flex;align-items:center;gap:8px;font-family:"Nunito Sans",sans-serif;font-size:1rem;font-weight:700;padding:6px 14px;border-radius:999px;background:var(--white);box-shadow:var(--shadow);margin-bottom:14px}
+  .status .dot{width:10px;height:10px;border-radius:50%;background:#8A8A8A;flex:none}
+  .status.is-open .dot{background:#1F7A4D}
+  .status.is-closed .dot{background:var(--chilli)}
+  .tagline{font-family:"Fraunces",Georgia,serif;font-size:clamp(1.2rem,3.5vw,1.6rem);font-weight:700;color:var(--muted);margin:0 0 16px}
+  .badges{display:flex;flex-wrap:wrap;gap:10px}
+  .badge{display:inline-flex;align-items:center;gap:8px;background:var(--white);border:1px solid var(--cream-2);border-radius:10px;padding:8px 12px;font-size:.9rem;font-weight:600;box-shadow:var(--shadow)}
+  .badge .star{color:var(--turmeric-deep);font-size:1.05rem}
+  .badge small{display:block;font-weight:400;color:var(--muted);font-size:.8rem}
+  .hero-art{display:none}
+  @media (min-width:800px){
+    .hero .wrap{grid-template-columns:1.3fr .7fr}
+    .hero-art{display:block;justify-self:center;width:min(100%,300px)}
+  }
+
+  /* Menu board */
+  .menu-grid{display:grid;gap:24px}
+  @media (min-width:800px){.menu-grid{grid-template-columns:1.1fr .9fr;align-items:start}}
+  .board{background:var(--aubergine);color:var(--cream);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
+  .board h3{color:var(--turmeric);font-family:"Nunito Sans",sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:.8rem;margin:0 0 10px}
+  .board ul{list-style:none;margin:0;padding:0}
+  .board li{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:12px 0;border-bottom:1px dashed rgba(251,244,230,.25);font-size:1.08rem}
+  .board li:last-child{border-bottom:0}
+  .board .dish{font-family:"Fraunces",Georgia,serif;font-weight:700;font-size:1.15rem}
+  .board .price{font-size:.8rem;color:var(--turmeric);white-space:nowrap;font-weight:700;letter-spacing:.02em}
+  .board .note{margin:10px 0 0;font-size:.85rem;color:rgba(251,244,230,.75)}
+  .sellout{display:flex;gap:12px;align-items:flex-start;background:var(--white);border-left:5px solid var(--chilli);border-radius:10px;padding:14px 16px;margin-top:20px;box-shadow:var(--shadow)}
+  .sellout svg{width:24px;height:24px;flex:none;margin-top:2px}
+  .sellout p{margin:0}
+  .sellout a{font-weight:700}
+  .photo{aspect-ratio:1/1;width:100%;object-fit:cover;border-radius:var(--radius);box-shadow:var(--shadow);background:var(--cream-2)}
+  .photo-caption{font-size:.9rem;color:var(--muted);margin-top:8px}
+
+  /* Seafood boil */
+  .seafood{background:var(--cream-2)}
+  .seafood-grid{display:grid;gap:24px}
+  @media (min-width:800px){.seafood-grid{grid-template-columns:.8fr 1.2fr;align-items:start}}
+  .prices{display:grid;gap:12px;margin:20px 0}
+  @media (min-width:560px){.prices{grid-template-columns:repeat(3,1fr)}}
+  .price-card{background:var(--white);border-radius:var(--radius);padding:18px 16px;box-shadow:var(--shadow);border-top:5px solid var(--turmeric)}
+  .price-card .amt{font-family:"Fraunces",Georgia,serif;font-size:2rem;font-weight:900;line-height:1;margin:4px 0}
+  .price-card .for{font-size:.9rem;color:var(--muted)}
+  .price-card.feast{border-top-color:var(--chilli)}
+  .inclusions{list-style:none;padding:0;margin:0 0 8px;display:grid;gap:8px}
+  .inclusions li{padding-left:28px;position:relative}
+  .inclusions li::before{content:"";position:absolute;left:0;top:.45em;width:16px;height:16px;border-radius:50%;background:var(--turmeric);box-shadow:inset 0 0 0 4px var(--cream-2)}
+
+  /* Catering */
+  .cater-grid{display:grid;gap:24px}
+  @media (min-width:800px){.cater-grid{grid-template-columns:1fr 1fr;align-items:start}}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 20px;padding:0;list-style:none}
+  .chips li{background:var(--white);border:1px solid var(--cream-2);border-radius:999px;padding:6px 12px;font-size:.92rem;font-weight:600}
+  .guide{background:var(--white);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+  .guide table{width:100%;border-collapse:collapse}
+  .guide td{padding:8px 0;border-bottom:1px solid var(--cream-2);vertical-align:top}
+  .guide tr:last-child td{border-bottom:0}
+  .guide td:last-child{text-align:right;font-weight:700;white-space:nowrap}
+  .guide .tag{display:inline-block;background:var(--cream-2);color:var(--turmeric-deep);font-size:.75rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border-radius:6px;padding:3px 8px;margin-bottom:8px}
+  .two-photos{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+  form{background:var(--white);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);display:grid;gap:14px}
+  label{display:grid;gap:6px;font-weight:700;font-size:.95rem}
+  input,select{font:inherit;padding:12px;border:1.5px solid #CBB99A;border-radius:10px;background:var(--cream);color:var(--ink);width:100%;min-height:48px}
+  input:focus,select:focus{outline:3px solid var(--turmeric);outline-offset:1px;border-color:var(--turmeric-deep)}
+  .form-row{display:grid;gap:14px}
+  @media (min-width:560px){.form-row{grid-template-columns:1fr 1fr}}
+  .form-foot{font-size:.9rem;color:var(--muted);margin:0}
+
+  /* About */
+  .about .wrap{max-width:760px}
+  .about p{font-size:1.1rem}
+
+  /* Hours */
+  .hours-grid{display:grid;gap:24px}
+  @media (min-width:800px){.hours-grid{grid-template-columns:1fr 1fr}}
+  .card{background:var(--white);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+  .hours{width:100%;border-collapse:collapse}
+  .hours td{padding:10px 8px;border-bottom:1px solid var(--cream-2)}
+  .hours tr:last-child td{border-bottom:0}
+  .hours td:last-child{text-align:right;white-space:nowrap}
+  .hours tr.today td{background:var(--cream-2);font-weight:700}
+  .hours tr.today td:first-child{border-radius:8px 0 0 8px}
+  .hours tr.today td:last-child{border-radius:0 8px 8px 0}
+  .hours .closed{color:var(--chilli);font-weight:700}
+  .addr{font-style:normal;line-height:1.6}
+  .addr a{font-weight:700}
+
+  /* Footer */
+  footer{background:var(--aubergine);color:var(--cream);padding:36px 0 32px;font-size:.95rem}
+  footer a{color:var(--turmeric)}
+  footer p{margin:0 0 .6em}
+  footer .fine{color:rgba(251,244,230,.7);font-size:.85rem;margin-top:16px}
+
+  /* Sticky bar (phones) */
+  .sticky{position:fixed;left:0;right:0;bottom:0;z-index:30;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:10px 12px;background:rgba(251,244,230,.96);border-top:1px solid var(--cream-2);box-shadow:0 -6px 20px rgba(43,26,46,.12);padding-bottom:max(10px,env(safe-area-inset-bottom))}
+  .sticky .btn{width:100%;padding:12px 10px;font-size:.95rem}
+  @media (min-width:768px){.sticky{display:none}body{padding-bottom:0}}
+
+  .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+</style>
+</head>
+<body>
+
+<div class="concept" role="note">
+  <strong>Concept mock-up</strong> for The Magic Pot, made by Tim. This isn't the restaurant's official website.
+</div>
+
+<nav class="nav" aria-label="Page sections">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="The Magic Pot, back to top">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M17 6c-3 4 1 6-2 10M24 4c-3 4 1 6-2 10M31 6c-3 4 1 6-2 10" fill="none" stroke="#B57A00" stroke-width="2.5" stroke-linecap="round"/><path d="M8 22h32v4a16 16 0 0 1-32 0z" fill="#2B1A2E"/><path d="M4 22h40" stroke="#E9A825" stroke-width="4" stroke-linecap="round"/><rect x="10" y="26" width="28" height="3" fill="#E9A825"/></svg>
+      The Magic Pot
+    </a>
+    <ul>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#seafood">Seafood boil</a></li>
+      <li><a href="#catering">Catering</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#find-us">Find us</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <p class="status" id="status" aria-live="polite"><span class="dot" aria-hidden="true"></span><span id="status-text">Checking today's hours…</span></p>
+      <h1>The Magic Pot</h1>
+      <p class="tagline">Best curries and platters in Richards Bay</p>
+      <div class="badges">
+        <span class="badge"><span class="star" aria-hidden="true">★</span><span>4.9 on Google<small>51 reviews</small></span></span>
+        <span class="badge"><span class="star" aria-hidden="true">🏆</span><span>Best of Zululand 2024/25<small>Best Indian Food · Zululand Observer</small></span></span>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn-wa" href="https://wa.me/27720984257?text=Hi%20Natasha%2C%20I'd%20like%20to%20order%20for%20collection%20today.%20" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.4a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 12 12 0 0 0 4.6 4c.6.3 1.1.4 1.5.5a3.7 3.7 0 0 0 1.7.1 2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg>
+          Order on WhatsApp
+        </a>
+        <a class="btn btn-outline" href="#catering">Catering enquiry</a>
+      </div>
+    </div>
+    <svg class="hero-art" viewBox="0 0 240 240" aria-hidden="true">
+      <g fill="none" stroke="#B57A00" stroke-width="5" stroke-linecap="round">
+        <path d="M82 28c-10 16 6 24-6 42"/><path d="M120 18c-10 16 6 24-6 42"/><path d="M158 28c-10 16 6 24-6 42"/>
+      </g>
+      <ellipse cx="120" cy="214" rx="86" ry="10" fill="#F3E6CC"/>
+      <path d="M40 104h160v26a80 80 0 0 1-160 0z" fill="#2B1A2E"/>
+      <path d="M48 112h144" stroke="#3E2A42" stroke-width="10"/>
+      <rect x="22" y="94" width="196" height="16" rx="8" fill="#E9A825"/>
+      <path d="M14 118h18M208 118h18" stroke="#2B1A2E" stroke-width="10" stroke-linecap="round"/>
+      <path d="M60 170q60 36 120 0" stroke="#E9A825" stroke-width="6" stroke-linecap="round" fill="none"/>
+      <circle cx="96" cy="86" r="7" fill="#B3261E"/><circle cx="144" cy="84" r="5" fill="#B3261E"/>
+    </svg>
+  </div>
+</header>
+
+<main>
+
+<section id="menu">
+  <div class="wrap">
+    <span class="eyebrow">Menu</span>
+    <h2>Curries made the way home cooks make them</h2>
+    <p class="lead">Generous portions at a fair price. Collect at the ZCBF Clubhouse in Alton, or order ahead on WhatsApp.</p>
+    <div class="menu-grid">
+      <div>
+        <div class="board">
+          <h3>From the pot</h3>
+          <ul>
+            <li><span class="dish">Mutton curry</span><span class="price">Prices go here</span></li>
+            <li><span class="dish">Chicken curry</span><span class="price">Prices go here</span></li>
+            <li><span class="dish">Mutton bunny chow</span><span class="price">Prices go here</span></li>
+            <li><span class="dish">Chicken breyani</span><span class="price">Prices go here</span></li>
+            <li><span class="dish">Vegetable breyani</span><span class="price">Prices go here</span></li>
+            <li><span class="dish">Samoosas</span><span class="price">Prices go here</span></li>
+          </ul>
+          <p class="note">Sample menu. Prices and daily specials to be confirmed with Natasha.</p>
+        </div>
+        <div class="sellout">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#B3261E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          <p><strong>Mutton bunny usually sells out by 1 pm.</strong> <a href="https://wa.me/27720984257?text=Hi%20Natasha%2C%20I'd%20like%20to%20order%20for%20collection%20today.%20" target="_blank" rel="noopener">Order ahead on WhatsApp.</a></p>
+        </div>
+      </div>
+      <figure style="margin:0">
+        <img class="photo" src="images/bunny-chow.jpg" width="600" height="600" loading="lazy" alt="Mutton bunny chow: a quarter loaf filled with mutton curry, sitting in a pool of gravy">
+        <figcaption class="photo-caption">Mutton bunny chow, our most asked-for lunch.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="seafood" class="seafood">
+  <div class="wrap">
+    <span class="eyebrow">Special</span>
+    <h2>Magical Seafood Boil Experience</h2>
+    <p class="lead">Crab, prawns, mussels and calamari, all drenched in our signature sauce. Book your table or your family feast.</p>
+    <div class="seafood-grid">
+      <figure style="margin:0">
+        <img class="photo" src="images/seafood-boil-poster.jpg" width="600" height="600" loading="lazy" alt="Promotional poster for the Magical Seafood Boil Experience showing a platter of crab, prawns and mussels in sauce">
+      </figure>
+      <div>
+        <div class="prices">
+          <div class="price-card"><div class="for">Single serving</div><div class="amt">R500</div><div class="for">Serves 1</div></div>
+          <div class="price-card"><div class="for">Double portion</div><div class="amt">R800</div><div class="for">Serves 2</div></div>
+          <div class="price-card feast"><div class="for">Fam Feast</div><div class="amt">R1 600</div><div class="for">Serves 6</div></div>
+        </div>
+        <h3>What's in the pot</h3>
+        <ul class="inclusions">
+          <li>Crab, prawns, mussels, calamari, corn, potatoes and sausage in our signature sauce</li>
+          <li>Served with garlic bread and noodles</li>
+          <li>Complimentary jug of passion fruit and lemonade per table</li>
+        </ul>
+        <div class="btn-row">
+          <a class="btn btn-wa" href="https://wa.me/27720984257?text=Hi%20Natasha%2C%20I'd%20like%20to%20book%20the%20seafood%20boil%20for%20%5Bnumber%5D%20people%20on%20%5Bdate%5D." target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.4a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 12 12 0 0 0 4.6 4c.6.3 1.1.4 1.5.5a3.7 3.7 0 0 0 1.7.1 2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg>
+            Book a seafood boil
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="catering">
+  <div class="wrap">
+    <span class="eyebrow">Catering</span>
+    <h2>Platters and catering for any occasion</h2>
+    <p class="lead">Feed the office, the wedding party or the whole family. Tell us the date and the numbers, and we'll quote.</p>
+    <div class="cater-grid">
+      <div>
+        <h3>We cater for</h3>
+        <ul class="chips">
+          <li>Corporate lunches</li><li>Weddings</li><li>Funerals</li><li>Parties</li><li>Year-end functions</li><li>Spit braai</li>
+        </ul>
+        <div class="guide">
+          <span class="tag">Guide prices, quoted per event</span>
+          <table>
+            <tr><td>Catering, per person</td><td>R100 – R300</td></tr>
+            <tr><td>Platters</td><td>R400 – R500</td></tr>
+            <tr><td>Meat platter</td><td>Serves 5</td></tr>
+          </table>
+        </div>
+        <div class="two-photos">
+          <img class="photo" src="images/platter-small.jpg" width="600" height="600" loading="lazy" alt="Round party platter with fried chicken pieces, meatballs, onion rings, cherry tomatoes and a dip in the centre">
+          <img class="photo" src="images/platter-large.jpg" width="600" height="600" loading="lazy" alt="Large catering platter with samoosas, pies, chicken wings, onion rings, rolls and sides">
+        </div>
+      </div>
+      <form id="cater-form" novalidate>
+        <h3 style="margin:0">Get a catering quote</h3>
+        <label>Event type
+          <select name="type" id="f-type">
+            <option>Corporate lunch</option><option>Wedding</option><option>Funeral</option><option>Party</option><option>Year-end function</option><option>Spit braai</option><option>Other</option>
+          </select>
+        </label>
+        <div class="form-row">
+          <label>Date<input type="date" name="date" id="f-date"></label>
+          <label>Number of people<input type="number" name="people" id="f-people" min="1" inputmode="numeric" placeholder="e.g. 40"></label>
+        </div>
+        <label>Your name<input type="text" name="name" id="f-name" autocomplete="name" placeholder="So we know who to reply to"></label>
+        <button type="submit" class="btn btn-wa" id="f-send">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.4a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 12 12 0 0 0 4.6 4c.6.3 1.1.4 1.5.5a3.7 3.7 0 0 0 1.7.1 2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg>
+          Send on WhatsApp
+        </button>
+        <p class="form-foot">No WhatsApp? <a id="f-mail" href="mailto:singhnatasha610@gmail.com?subject=Catering%20enquiry">Email us instead</a>.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div class="wrap">
+    <span class="eyebrow">About</span>
+    <h2>Natasha's kitchen</h2>
+    <p>The Magic Pot is owner-run by Natasha, and she's usually the one who welcomes you at the door. We cook from the ZCBF Clubhouse in Alton, where the industrial area's workers come for a proper lunch. Our curries and platters were voted Best Indian Food in the Zululand Observer's Best of Zululand 2024/25. Come for the mutton curry, the breyani and the bunny chow, and stay for the welcome.</p>
+  </div>
+</section>
+
+<section id="find-us">
+  <div class="wrap">
+    <span class="eyebrow">Hours and find us</span>
+    <h2>Open weekdays for lunch and takeaways</h2>
+    <div class="hours-grid">
+      <div class="card">
+        <h3>Opening hours</h3>
+        <table class="hours" id="hours">
+          <tr data-day="1"><td>Monday</td><td>08:00 – 17:00</td></tr>
+          <tr data-day="2"><td>Tuesday</td><td>08:00 – 17:00</td></tr>
+          <tr data-day="3"><td>Wednesday</td><td>08:00 – 17:00</td></tr>
+          <tr data-day="4"><td>Thursday</td><td>08:00 – 17:00</td></tr>
+          <tr data-day="5"><td>Friday</td><td>08:00 – 17:00</td></tr>
+          <tr data-day="6"><td>Saturday</td><td class="closed">Closed</td></tr>
+          <tr data-day="0"><td>Sunday</td><td class="closed">Closed</td></tr>
+        </table>
+      </div>
+      <div class="card">
+        <h3>Where we are</h3>
+        <address class="addr">
+          ZCBF Clubhouse<br>
+          Richards Bay Central (Alton)<br>
+          Richards Bay, 3900<br>
+          <a href="tel:+27720984257">072 098 4257</a>
+        </address>
+        <div class="btn-row">
+          <a class="btn btn-turmeric" href="https://www.google.com/maps/search/?api=1&query=The+Magic+Pot+ZCBF+Richards+Bay" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-7.1 7-12a7 7 0 0 0-14 0c0 4.9 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            Get directions
+          </a>
+          <a class="btn btn-outline" href="tel:+27720984257">Call us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>The Magic Pot</strong> · ZCBF Clubhouse, Richards Bay Central (Alton), Richards Bay, 3900</p>
+    <p><a href="tel:+27720984257">072 098 4257</a> · <a href="https://wa.me/27720984257" target="_blank" rel="noopener">WhatsApp</a></p>
+    <p class="fine">Details taken from The Magic Pot's Google listing and Facebook page, 15 October 2026. Concept mock-up, not the restaurant's official website.</p>
+  </div>
+</footer>
+
+<div class="sticky" aria-label="Quick actions">
+  <a class="btn btn-wa" href="https://wa.me/27720984257?text=Hi%20Natasha%2C%20I'd%20like%20to%20order%20for%20collection%20today.%20" target="_blank" rel="noopener">WhatsApp</a>
+  <a class="btn btn-turmeric" href="#catering">Catering</a>
+</div>
+
+<script>
+(function(){
+  // Mon–Fri 08:00–17:00, closed Saturday and Sunday. Local device time.
+  var HOURS = {1:[8,17],2:[8,17],3:[8,17],4:[8,17],5:[8,17]};
+  var DAYS = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  function fmt(h){ return h > 12 ? (h-12)+' pm' : (h === 12 ? '12 pm' : h+' am'); }
+  function nextOpen(d){
+    for (var i=1;i<=7;i++){ var n=(d+i)%7; if (HOURS[n]) return 'Back '+DAYS[n]+' at '+fmt(HOURS[n][0])+'.'; }
+    return '';
+  }
+  function statusFor(now){
+    var d = now.getDay(), h = now.getHours() + now.getMinutes()/60, today = HOURS[d];
+    if (!today) return {open:false, text:'Closed today. '+nextOpen(d)};
+    if (h < today[0]) return {open:false, text:'Closed now. Opens today at '+fmt(today[0])+'.'};
+    if (h < today[1]) return {open:true, text:'Open now · closes '+fmt(today[1])};
+    return {open:false, text:'Closed now. '+nextOpen(d)};
+  }
+  function render(now){
+    var s = statusFor(now), el = document.getElementById('status');
+    document.getElementById('status-text').textContent = s.text;
+    el.classList.toggle('is-open', s.open);
+    el.classList.toggle('is-closed', !s.open);
+    var rows = document.querySelectorAll('#hours tr');
+    for (var i=0;i<rows.length;i++) rows[i].classList.toggle('today', +rows[i].getAttribute('data-day') === now.getDay());
+  }
+  window.renderStatus = render; // lets you test: renderStatus(new Date('2026-10-17T10:00'))
+  render(new Date());
+
+  // Catering form: open WhatsApp with the details filled in; mailto link mirrors the same text.
+  var form = document.getElementById('cater-form');
+  function message(){
+    var type = document.getElementById('f-type').value;
+    var date = document.getElementById('f-date').value || '[date]';
+    var people = document.getElementById('f-people').value || '[number]';
+    var name = document.getElementById('f-name').value || '';
+    return 'Hi Natasha, I\'d like a catering quote.\nEvent: '+type+'\nDate: '+date+'\nNumber of people: '+people+(name ? '\nName: '+name : '');
+  }
+  function updateMail(){
+    document.getElementById('f-mail').href = 'mailto:singhnatasha610@gmail.com?subject='+encodeURIComponent('Catering enquiry')+'&body='+encodeURIComponent(message());
+  }
+  form.addEventListener('input', updateMail);
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    window.open('https://wa.me/27720984257?text='+encodeURIComponent(message()), '_blank', 'noopener');
+  });
+  updateMail();
+})();
+</script>
+</body>
+</html>
